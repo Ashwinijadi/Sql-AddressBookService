@@ -117,4 +117,16 @@ SELECT state,COUNT(state) FROM Address_book GROUP BY state;
 ```
  SELECT * FROM Address_book WHERE city='Warangal' ORDER BY firstName;
 ```
+## UC9_identify each Address Book with name and Type.
 
+### Altering table and updating addressBookName and type
+
+```
+ALTER TABLE Address_Book ADD addressBookName VARCHAR(150) AFTER email;
+update Address_book set addressBookName='Personal' where firstName ='Ashwini';
+update Address_book set addressBookName='Business' where firstName ='Arun';
+ALTER TABLE Address_Book ADD Type VARCHAR(150) AFTER addressBookName;
+update Address_book set Type='Family' where firstName ='Ashwini';
+update Address_book set Type='Friends' where firstName ='Sony';
+```
+ 
