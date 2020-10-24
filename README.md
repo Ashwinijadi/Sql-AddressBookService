@@ -51,3 +51,14 @@ DESCRIBE Address_book;
 ```
 SELECT * FROM Address_book;
 ```
+
+## UC4_Edit Contacts in AddressBook using name
+
+```
+ update Address_book set state='Telangana' where firstName ='Ashwini';
+```
+###see updated database table data using data base query
+
+```
+SELECT * FROM Address_book;
+```
