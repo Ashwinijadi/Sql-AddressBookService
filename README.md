@@ -64,7 +64,7 @@ SELECT * FROM Address_book;
 SELECT * FROM Address_book;
 ```
 
-## UC4_Delete Contacts in AddressBook using name
+## UC5_Delete Contacts in AddressBook using name
 
 ```
  DELETE FROM Address_book WHERE firstName='Arun';
@@ -74,3 +74,25 @@ SELECT * FROM Address_book;
 ```
 SELECT * FROM Address_book;
 ```
+
+## UC6_Retrieve Person belonging to a City or State from the Address Book
+
+### to view data of person belonging to city hyderabad using data base query
+
+```
+SELECT * FROM Address_book WHERE city='Hyderabad';
+```
+
+### to view data of person belonging to city Warangal using data base query
+
+```
+ SELECT * FROM Address_book WHERE city='Warangal';
+```
+
+### to view data of person belonging to state Telangana using data base query
+
+```
+SELECT * FROM Address_book WHERE state='Telangana';
+```
+
+
