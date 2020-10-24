@@ -104,4 +104,17 @@ SELECT city,COUNT(city) FROM Address_book GROUP BY city;
 ```
 SELECT state,COUNT(state) FROM Address_book GROUP BY state;
 ```
+## UC8_Retrieve entries sorted alphabetically by Person’s name for a given city
+
+### to sort person names belonging to city hyderabad using data base query
+
+```
+ SELECT * FROM Address_book WHERE city='Hyderabad' ORDER BY firstName;
+```
+
+### to sort person names belonging to city Warangal using data base query
+
+```
+ SELECT * FROM Address_book WHERE city='Warangal' ORDER BY firstName;
+```
 
