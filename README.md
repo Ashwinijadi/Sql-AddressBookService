@@ -95,4 +95,13 @@ SELECT * FROM Address_book WHERE city='Hyderabad';
 SELECT * FROM Address_book WHERE state='Telangana';
 ```
 
+## UC7_ Size of Addressbook by City and State
+
+```
+SELECT city,COUNT(city) FROM Address_book GROUP BY city;
+```
+
+```
+SELECT state,COUNT(state) FROM Address_book GROUP BY state;
+```
 
