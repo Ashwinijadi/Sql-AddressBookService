@@ -57,7 +57,19 @@ SELECT * FROM Address_book;
 ```
  update Address_book set state='Telangana' where firstName ='Ashwini';
 ```
-###see updated database table data using data base query
+
+### see updated database table data using data base query
+
+```
+SELECT * FROM Address_book;
+```
+
+## UC4_Delete Contacts in AddressBook using name
+
+```
+ DELETE FROM Address_book WHERE firstName='Arun';
+```
+### see updated database table data using data base query
 
 ```
 SELECT * FROM Address_book;
