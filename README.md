@@ -129,4 +129,8 @@ ALTER TABLE Address_Book ADD Type VARCHAR(150) AFTER addressBookName;
 update Address_book set Type='Family' where firstName ='Ashwini';
 update Address_book set Type='Friends' where firstName ='Sony';
 ```
- 
+## UC10 Get Number of Persons by type
+
+``` 
+SELECT Type,COUNT(Type) FROM Address_book GROUP BY Type;
+``` 
