@@ -15,7 +15,7 @@ create database Address_Book_Service;
 ```
 use Address_Book_Service;
 ```
-## UC2_Create Employee Payroll table in the Payroll_Service database
+## UC2_Create addressBook table in the Payroll_Service database
 ```
  CREATE TABLE Address_book
     -> (
@@ -35,4 +35,19 @@ use Address_Book_Service;
 
 ```
 DESCRIBE Address_book;
+```
+
+## UC3_Insert new Contacts to AddressBook
+
+```
+       INSERT INTO Address_book(firstName ,lastName , address , city ,state,zip,phoneNumber,email) VALUES
+    -> ('Ashwini' ,'jadi' ,'kukatpally','Hyderabad','TS',541545,789456123,'ash@gmail.com'),
+    -> ('Sony' ,'j' ,'kazipet','Warangal','Telangana',500545,722561230,'sony@gmail.com'),
+    -> ('Arun' ,'jadi','kukatpally','Hyderabad' ,'Telangana',541545,998456123,'arun@gmail.com');
+```
+
+### see database table data using data base query
+
+```
+SELECT * FROM Address_book;
 ```
