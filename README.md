@@ -134,3 +134,19 @@ update Address_book set Type='Friends' where firstName ='Sony';
 ``` 
 SELECT Type,COUNT(Type) FROM Address_book GROUP BY Type;
 ``` 
+## UC11_Ability to add person to both Friend and Family
+
+### altered table and added person in family Type
+
+``` 
+alter table address_book drop primary key;
+alter table address_book add primary key(firstName,Type);
+INSERT INTO Address_book(firstName ,lastName , address , city ,state,zip,phoneNumber,email,addressBookName,Type) VALUES
+    -> ('Ashwini' ,'jadi' ,'kukatpally','Hyderabad','TS',541545,789456123,'ash@gmail.com','Personal','Family');
+```
+### added person in family Type
+
+```
+INSERT INTO Address_book(firstName ,lastName , address , city ,state,zip,phoneNumber,email,addressBookName,Type) VALUES
+    -> ('Ashwini' ,'jadi' ,'kukatpally','Hyderabad','TS',541545,789456123,'ash@gmail.com','Personal','Friends');
+````
