@@ -15,7 +15,7 @@ create database Address_Book_Service;
 ```
 use Address_Book_Service;
 ```
-## UC2_Create addressBook table in the Payroll_Service database
+## UC2_Create addressBook table in the Address_Book_Service database
 ```
  CREATE TABLE Address_book
     -> (
@@ -134,7 +134,7 @@ update Address_book set Type='Friends' where firstName ='Sony';
 ``` 
 SELECT Type,COUNT(Type) FROM Address_book GROUP BY Type;
 ``` 
-## UC11_Ability to add person to both Friend and Family
+## UC11- Ability to add person to both Friend and Family
 
 ### altered table and added person in family Type
 
@@ -150,3 +150,38 @@ INSERT INTO Address_book(firstName ,lastName , address , city ,state,zip,phoneNu
 INSERT INTO Address_book(firstName ,lastName , address , city ,state,zip,phoneNumber,email,addressBookName,Type) VALUES
     -> ('Ashwini' ,'jadi' ,'kukatpally','Hyderabad','TS',541545,789456123,'ash@gmail.com','Personal','Friends');
 ````
+## UC13- Retrieve all Queries with new table structure
+
+### created table addressbookName
+
+```
+ CREATE TABLE Address_book_Name
+    -> (addressBookName        VARCHAR(150) NOT NULL,
+    -> (Type        VARCHAR(150) NOT NULL PRIMARY KEY
+    -> );
+```
+### to see Address_book_Name using data base query
+
+```
+desc Address_book_Name;
+```
+### to view data of person belonging to city hyderabad using data base query
+
+```  
+SELECT * FROM Address_book WHERE city='Hyderabad';
+```
+### to view data of person belonging to state TS using data base query
+
+```
+SELECT * FROM Address_book WHERE state='TS';
+```
+### to sort person names belonging to city hyderabad using data base query
+
+```
+SELECT * FROM Address_book WHERE city='Hyderabad' ORDER BY firstName;
+```
+### Get Number of Persons by type
+
+```
+SELECT Type,COUNT(Type) FROM Address_book GROUP BY Type;
+```
